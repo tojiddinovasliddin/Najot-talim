@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="ex_2"/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-05-30 03:27:34 PM"/>
+        <attribute name="created" value="VXNlcjtXSU4tVDcwQkVKMDRSTjc7MjAyNi0wNS0zMDswMzoyMjozNCBQTTsyNjg1"/>
+        <attribute name="edited" value="VXNlcjtXSU4tVDcwQkVKMDRSTjc7MjAyNi0wNS0zMDswMzoyNzozNCBQTTsxOzI3OTg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, c" type="Real" array="False" size=""/>
+            <output expression="&quot;Birinchi sonni kiriting: &quot;" newline="True"/>
+            <input variable="a"/>
+            <output expression="&quot;Ikkinchi sonni kiriting: &quot;" newline="True"/>
+            <input variable="b"/>
+            <output expression="&quot;Uchinchi sonni kiriting: &quot;" newline="True"/>
+            <input variable="c"/>
+            <if expression="a&lt;b &amp;&amp;a&lt;c">
+                <then>
+                    <output expression="&quot;Eng kichkina son: &quot; &amp;a" newline="True"/>
+                </then>
+                <else>
+                    <if expression="b&lt;a &amp;&amp; b&lt;c">
+                        <then>
+                            <output expression="&quot;Eng kichkina son: &quot; &amp;b" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Eng kichkina son: &quot; &amp;c" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

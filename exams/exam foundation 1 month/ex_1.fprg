@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="ex_1"/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-05-30 03:12:20 PM"/>
+        <attribute name="created" value="VXNlcjtXSU4tVDcwQkVKMDRSTjc7MjAyNi0wNS0zMDswMzowNDozMyBQTTsyNjg0"/>
+        <attribute name="edited" value="VXNlcjtXSU4tVDcwQkVKMDRSTjc7MjAyNi0wNS0zMDswMzoxMjoyMCBQTTsxOzI3ODc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, c, d, f" type="Integer" array="False" size=""/>
+            <output expression="&quot;sonni kiriting: &quot;" newline="True"/>
+            <input variable="a"/>
+            <if expression="a&gt;99 &amp;&amp; a&lt;1000">
+                <then>
+                    <assign variable="b" expression="a%10"/>
+                    <assign variable="c" expression="a/10%10"/>
+                    <assign variable="d" expression="a/100"/>
+                    <assign variable="f" expression="b+c+d"/>
+                    <output expression="&quot;Sonlarni yigindisi: &quot; &amp; f" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;3 xonali son kiriting&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
