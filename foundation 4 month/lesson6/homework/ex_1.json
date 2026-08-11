@@ -1,0 +1,15 @@
+{
+    "yangilangan_sana": "2026-08-08",
+    "valyutalar": [
+        { "kod": "USD", "nomi": "AQSH dollari", "kurs": 12850.50 },
+        { "kod": "EUR", "nomi": "Yevro",          "kurs": 13980.20 },
+        { "kod": "RUB", "nomi": "Rossiya rubli",  "kurs": 153.40  },
+        { "kod": "GBP", "nomi": "Angliya funti",  "kurs": 16320.75 },
+        { "kod": "JPY", "nomi": "Yaponiya iyenasi","kurs": 87.15   },
+        { "kod": "AZN", "nomi": "Ozarbayjon manati","kurs": 7558.90 },
+        { "kod": "BDT", "nomi": "Bangladesh takasi","kurs": 108.30 },
+        { "kod": "BGN", "nomi": "Болгар levi",     "kurs": 7147.60 },
+        { "kod": "BHD", "nomi": "Bahrayn dinori",  "kurs": 34095.00 },
+        { "kod": "BND", "nomi": "Bruney dollari",  "kurs": 9540.25 }
+    ]
+}
