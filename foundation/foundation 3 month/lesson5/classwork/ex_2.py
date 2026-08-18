@@ -1,0 +1,18 @@
+k=int(input("Nechta dasturchi kiritmoqchisiz: "))
+ms=set()
+arr=set()
+for x in range(1,k+1):
+	s=input(f"{x} chi dasturchini kiriting: ")
+	ms.add(s)
+a=int(input("nechta dizayner kiritmoqchisiz: "))
+for x in range(1,a+1):
+	w=input(f"{x} chi dizaynerni kiriting: ")
+	arr.add(w)
+print("dasturchilar: ",ms)
+print("dizaynerlar: ",arr)
+both=ms.intersection(arr)
+all=ms.union(arr)
+only=ms.difference(arr)
+print(both)
+print(all)
+print(only)
