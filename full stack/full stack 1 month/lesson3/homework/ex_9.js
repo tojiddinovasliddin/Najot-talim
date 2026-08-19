@@ -12,7 +12,6 @@ function check(a,b,callback)
     {
         console.log("Ikka son xam teng")
     }
-
 }
 function set()
 {
