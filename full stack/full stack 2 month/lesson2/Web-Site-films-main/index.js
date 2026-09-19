@@ -7,11 +7,16 @@ let min_year = document.querySelector("#min")
 let max_year = document.querySelector("#max")
 
 let searchs = [];
+var tot_page= 0;
+let now_page = 1
+let now_page_name = "top_movies"
 
 async function getInfo(data) {
     const arr = await fetch(`${data}`)
     const ms = await arr.json()
-   return ms
+    tot_page = ms.total_pages
+    return ms
+
 
 }
 
@@ -33,25 +38,29 @@ function move_name(name){
     }
 }
 
-async function top_movies(){
-    const top_film = await getInfo(`https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}`)
+async function top_movies() {
+    num_page.textContent = now_page
+    now_page_name = "top_movies"
+    const top_film = await getInfo(`https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}&page=${now_page}`)
     searchs = top_film.results
     move_name(top_film.results)
-
 
 
 }
 
 async function popular_movies() {
-    const pop_film = await getInfo(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}`)
+    num_page.textContent = now_page
+    now_page_name = "popular_movies"
+    const pop_film = await getInfo(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&page=${now_page}`)
     searchs = pop_film.results
     move_name(pop_film.results)
-
 
 }
 
 async function upcoming_movies() {
-    const upcoming_film = await getInfo(`https://api.themoviedb.org/3/movie/upcoming?api_key=${API_KEY}`)
+    now_page_name = "upcoming_movies"
+    num_page.textContent = now_page
+    const upcoming_film = await getInfo(`https://api.themoviedb.org/3/movie/upcoming?api_key=${API_KEY}&page=${now_page}`)
     searchs = upcoming_film.results
     move_name(upcoming_film.results)
 
@@ -65,19 +74,22 @@ function seach_btn() {
 
     let result = searchs
 
-    if (s) {
+    if (s)
+    {
         result = result.filter(movie =>
             movie.title.toLowerCase().includes(s)
         )
     }
 
-    if (ave) {
+    if (ave)
+    {
         result = result.filter(el => {
             return el.vote_average >= ave
         })
     }
 
-    if (minn || maxx) {
+    if (minn || maxx)
+    {
         let year_list = search_year(minn || 0, maxx || 9999)
         result = result.filter(el => year_list.includes(el.release_date))
     }
@@ -88,13 +100,15 @@ function search_year(mins, maxs) {
     let res = []
     let ans = []
     let res_year = []
-    for (let i = 0; i < searchs.length; i++) {
+    for (let i = 0; i < searchs.length; i++)
+    {
         res.push(searchs[i].release_date)
         let split = res[i].split("-")
         ans.push(split)
 
     }
-    for (let i = 0; i < searchs.length; i++) {
+    for (let i = 0; i < searchs.length; i++)
+    {
         if (ans[i][0] >= mins && ans[i][0] <= maxs) {
             res_year.push(res[i])
         }
@@ -104,31 +118,35 @@ function search_year(mins, maxs) {
 
 function next() {
 
-    let k = num_page.textContent
-    if (k == "1")
+    if (now_page < tot_page)
     {
-         num_page.textContent="2"
-        popular_movies()
-    }
-    else if (k == "2")
-    {
-        num_page.textContent = "3"
+        now_page++
+        if (now_page_name == "top_movies") {
+            top_movies()
+        }
+        else if (now_page_name == "popular_movies") {
+            popular_movies()
+        }
+        else if (now_page_name == "upcoming_movies") {
             upcoming_movies()
+        }
     }
 }
+
 function prev() {
-
-    let k = num_page.textContent
-
-    if (k == "2") {
-        num_page.textContent = "1"
-        top_movies()
+    if (now_page > 1)
+    {
+        now_page--
+        if (now_page_name == "top_movies") {
+            top_movies()
+        }
+        else if (now_page_name == "popular_movies") {
+            popular_movies()
+        }
+        else if (now_page_name == "upcoming_movies") {
+            upcoming_movies()
+        }
     }
-    else if (k=="3") {
-        num_page.textContent = "2"
-        top_movies()
-    }
- 
 }
 
 
