@@ -115,10 +115,6 @@ function next() {
         num_page.textContent = "3"
             upcoming_movies()
     }
-    else {
-        num_page.textContent = "1"
-        top_movies()
-    }
 }
 function prev() {
 
@@ -132,10 +128,7 @@ function prev() {
         num_page.textContent = "2"
         top_movies()
     }
-    else{
-        num_page.textContent = "3"
-        popular_movies()
-    }
+ 
 }
 
 
