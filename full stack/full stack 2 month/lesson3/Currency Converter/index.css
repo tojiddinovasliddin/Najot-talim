@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+body{
+    background-color: #1c2948;
+
+}
+.container{
+    background-color:#060910;
+    padding: 120px;
+
+
+
+}
+.box{
+    background-color: #141e33;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 800px;
+    width: 800px;
+    border-radius: 40px;
+}
+.amount{
+    border-radius: 40px;
+}
+.title{
+    display: flex;
+
+
+
+}
+.title img {
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+
+}
+.title h3{
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 20px;
+    color: #ffffff;
+}
+.amount{
+    background-color: #171127;
+    width: 700px;
+    height: 600px;
+    margin-left: 50px;
+
+}
+.input{
+    background-color:#141e33;
+    margin: 20px;
+    height: 60px;
+    width: 600px;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-style: italic;
+    border: solid #0d0d63;
+    border-radius: 20px;
+    color: #ffffff;
+
+
+
+}
+
+.selects{
+    display: flex;
+
+}
+.from{
+    margin-left: 50px;
+}
+.form{
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 30px;
+    display: flex;
+    color: #979cac;
+
+
+}
+#money1{
+    height: 50px;
+    width: 200px;
+    color: #ffffff;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #141e33;
+    border: solid #0d0d63;
+    border-radius: 20px;
+
+}
+.selects img{
+
+    width: 60px;
+    height: 60px;
+    padding-left: 40px;
+    margin: 30px;
+
+}
+
+.to{
+    margin-left: 40px;
+}
+.too{
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 30px;
+    display: flex;
+    color: #979cac;
+
+}
+#money2{
+    height: 50px;
+    width: 200px;
+    color: #ffffff;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #141e33;
+    border: solid #0d0d63;
+    border-radius: 20px;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 50px;
+    height: 70px;
+    width: 600px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    color: #ffffff;
+    background-color: #1842c1;
+    border-radius: 30px;
+    cursor: pointer;
+}
+button:hover{
+    background: #0a1e58;
+}
+button img {
+    width: 40px;
+    height: 40px;
+    margin-left: 200px;
+}
+
+.box1{
+    margin: 50px;
+    margin-left: 50px;
+    background-color: rgb(38, 19, 64);
+    width: 600px;
+    height: 140px;
+    display: flex;
+    color: #ffffff;
+    background-color: #141e33;;
+    border: solid #0d0d63;
+    border-radius: 20px;
+
+}
+.input_money{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 30px;
+    margin-top: 40px;
+    font-size: 30px;
+
+}
+img{
+    height: 120px;
+    width: 60px;
+
+
+}
+.output_money{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 30px;
+    margin-top: 40px;
+    font-size: 30px;
+}
