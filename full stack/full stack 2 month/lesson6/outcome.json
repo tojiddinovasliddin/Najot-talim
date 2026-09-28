@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "amount": "240",
+        "purpose": "salary"
+    },
+    {
+        "id": 2,
+        "amount": "230",
+        "purpose": "booksd"
+    },
+    {
+        "id": 3,
+        "amount": "230",
+        "purpose": "booksd"
+    },
+    {
+        "id": 4,
+        "amount": "230",
+        "purpose": "bookss"
+    }
+]

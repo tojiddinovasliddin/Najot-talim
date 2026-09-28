@@ -1,0 +1,7 @@
+fs = require("fs")
+let outcome = JSON.parse(fs.readFileSync("outcome.json", "utf-8"))
+let income = JSON.parse(fs.readFileSync("income.json", "utf-8"))
+console.log("---------------INCOME---------------")
+console.table(income)
+console.log("---------------OUTCOME---------------")
+console.table(outcome)
