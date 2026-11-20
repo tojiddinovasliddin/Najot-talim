@@ -1,0 +1,38 @@
+
+generator client {
+  provider     = "prisma-client"
+  output       = "../src/generated/prisma"
+  moduleFormat = "cjs"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Users{
+  id Int @id @default(autoincrement())
+  name String
+  phone String 
+  age Int 
+  password String
+
+  @@map("users") //teachers
+}
+
+model Students{
+  id Int @id @default(autoincrement())
+  name String
+  subject String
+  password String
+
+  @@map("students")
+}
+
+model User{
+  id Int @id @default(autoincrement())
+  fullname String
+  email String
+  age Int
+
+  @@map("user")
+}
